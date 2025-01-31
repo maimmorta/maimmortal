@@ -6,28 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maimmortal UI Design</title>
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-  <!-- Boxicons CSS -->
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-  <!-- Font Awesome for Audiomack -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
   <div class="profile-card">
-    <!-- Profile Image -->
     <div class="image">
       <img src="profile.jpg" alt="Profile Image" class="profile-img" />
     </div>
 
-    <!-- Profile Details -->
     <div class="text-data">
       <span class="name">Maimmortal Pro</span>
       <span class="job">Films Editor, VFXPRE</span>
     </div>
 
-    <!-- Social Icons -->
     <div class="media-buttons">
       <a href="https://www.facebook.com/officialmanywelebab" style="background: #4267b2" class="link">
         <i class="bx bxl-facebook"></i>
@@ -43,61 +37,50 @@
       </a>
     </div>
 
-    <!-- Subscribe and Message Buttons -->
     <div class="buttons">
       <button class="button" onclick="subscribe()">Subscribe</button>
       <button class="button" onclick="message()">Message</button>
     </div>
 
-    <!-- Analytics -->
     <div class="analytics">
       <div class="data">
         <i class="bx bx-heart" onclick="likePost()"></i>
         <span class="number" id="likes">60k</span>
       </div>
       <div class="data">
-        <i class="bx bx-message-rounded"></i>
-        <span class="number">20k</span>
+        <i class="bx bx-message-rounded" onclick="commentPost()"></i>
+        <span class="number" id="comments">20k</span>
       </div>
       <div class="data">
         <i class="bx bx-share" onclick="sharePost()"></i>
-        <span class="number">12k</span>
+        <span class="number" id="shares">0k</span>
       </div>
     </div>
-
-    <!-- Work List -->
-    <div class="work-list">
-      <h3>Recent Works</h3>
-      <ul>
-        <li>Film Editing - projects </li>
-        <li>Music Video - projects</li>
-      </ul>
-    </div>
+    
+   <!-- Work List with Links -->
+   <div class="work-list">
+    <h3>Recent Works</h3>
+    <ul>
+      <li><a href="movies.html">Film Editing - projects</a></li>
+      <li><a href="music.html">Music Video - projects</a></li>
+    </ul>
   </div>
+</div>
 
-  <script>
-    function subscribe() {
-      alert('Thank you for subscribing!');
-    }
+<!-- Kisanduku cha kuandika ujumbe -->
+<div id="message-box" style="display:none;">
+  <textarea id="message-text" placeholder="Write your message here..."></textarea>
+</div>
 
-    function message() {
-      alert('Messaging feature coming soon!');
-    }
+<!-- Kifungo cha kutuma ujumbe -->
+<button id="send-message" onclick="sendMessage()" style="display:none;">Send Message</button>
 
-    function likePost() {
-      let likeElement = document.getElementById('likes');
-      let currentLikes = parseInt(likeElement.innerText.replace('k', ''));
-      likeElement.innerText = (currentLikes + 1) + 'k';
-    }
+<div id="comment-box" style="display:none;">
+  <textarea id="comment-text" placeholder="Write your comment here..."></textarea>
+</div>
+<button id="submit-comment" onclick="submitComment()" style="display:none;">Submit Comment</button>
 
-    function sharePost() {
-      alert('Post shared successfully!');
-    }
-
-    function showMore() {
-      alert('More projects coming soon!');
-    }
-  </script>
+<script src="app.js"></script>
 </body>
 
 </html>

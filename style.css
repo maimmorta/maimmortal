@@ -20,11 +20,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 370px;
+  max-width: 400px;
   width: 100%;
   background: #fff;
-  border-radius: 24px;
-  padding: 25px;
+  border-radius: 45px;
+  padding: 80px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -47,7 +47,7 @@ body {
   border-radius: 50%;
   background-color: #4070f4;
   padding: 3px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .image .profile-img {
@@ -71,7 +71,6 @@ body {
   color: #333;
   display: block;
 }
-
 
 .text-data .job {
   font-size: 15px;
@@ -143,14 +142,148 @@ body {
 .data:last-child {
   border-right: none;
 }
-<!-- Work List Section -->
-<div class="work-list">
-  <h3>Kazi Zangu za Hivi Karibuni</h3>
-  <ul>
-    <li>1. Video Editing - Project A</li>
-    <li>2. VFX Design - Project B</li>
-    <li>3. Short Film Production - Project C</li>
-    <li>4. Music Video Editing - Project D</li>
-    <li>5. Graphic Motion Design - Project E</li>
-  </ul>
-</div>
+
+/* Movies and Music Section */
+.work-list {
+  margin-top: 1px;
+  padding: 1px;
+  background: #302e38;
+  border-radius: 40px;
+  box-shadow: 2 4px 8px rgba(0, 0, 0, 0.1);
+  width: 120%;
+  text-align: center;
+  transform: translateY(40px); /* Moves the element 20px down */
+}
+
+.work-list h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.work-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.work-list ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.work-list ul li:last-child {
+  border-bottom: none;
+}
+
+.work-list ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.work-list ul li a:hover {
+  color: #e9810a;
+}
+
+/* General Styles */
+
+.container {
+  background: #29293d;
+  padding: 70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+}
+
+h2 {
+  font-size: 30px;
+  color: #ffcc00;
+  margin-bottom: 30px;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+}
+
+.movie-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #40405a;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.movie-list li:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+}
+
+.movie-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.movie-list li:hover a {
+  color: #29293d;
+}
+
+a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* music list */
+
+.music-list {
+  list-style: none;
+  padding: 0;
+}
+
+.music-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #40405a;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.music-list li:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+}
+
+.music-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.music-list li:hover a {
+  color: #29293d;
+}
+
+a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
