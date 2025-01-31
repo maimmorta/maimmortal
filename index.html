@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maimmortal UI Design</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Font Awesome for Audiomack -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <div class="profile-card">
+    <!-- Profile Image -->
+    <div class="image">
+      <img src="profile.jpg" alt="Profile Image" class="profile-img" />
+    </div>
+
+    <!-- Profile Details -->
+    <div class="text-data">
+      <span class="name">Maimmortal Pro</span>
+      <span class="job">Films Editor, VFXPRE</span>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="media-buttons">
+      <a href="https://www.facebook.com/officialmanywelebab" style="background: #4267b2" class="link">
+        <i class="bx bxl-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/manyweleimmortaal?igsh=M2F5MHZxbXR2MTJq" style="background: #e1306c" class="link">
+        <i class="bx bxl-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCO4kfYdPuIC6zF6vxPYt8vg" style="background: #ff0000" class="link">
+        <i class="bx bxl-youtube"></i>
+      </a>
+      <a href="https://audiomack.com/maimmortalmusic" style="background: #ffa200" class="link">
+        <i class="fa-brands fa-audiomack"></i>
+      </a>
+    </div>
+
+    <!-- Subscribe and Message Buttons -->
+    <div class="buttons">
+      <button class="button" onclick="subscribe()">Subscribe</button>
+      <button class="button" onclick="message()">Message</button>
+    </div>
+
+    <!-- Analytics -->
+    <div class="analytics">
+      <div class="data">
+        <i class="bx bx-heart" onclick="likePost()"></i>
+        <span class="number" id="likes">60k</span>
+      </div>
+      <div class="data">
+        <i class="bx bx-message-rounded"></i>
+        <span class="number">20k</span>
+      </div>
+      <div class="data">
+        <i class="bx bx-share" onclick="sharePost()"></i>
+        <span class="number">12k</span>
+      </div>
+    </div>
+
+    <!-- Work List -->
+    <div class="work-list">
+      <h3>Recent Works</h3>
+      <ul>
+        <li>Film Editing - projects </li>
+        <li>Music Video - projects</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function subscribe() {
+      alert('Thank you for subscribing!');
+    }
+
+    function message() {
+      alert('Messaging feature coming soon!');
+    }
+
+    function likePost() {
+      let likeElement = document.getElementById('likes');
+      let currentLikes = parseInt(likeElement.innerText.replace('k', ''));
+      likeElement.innerText = (currentLikes + 1) + 'k';
+    }
+
+    function sharePost() {
+      alert('Post shared successfully!');
+    }
+
+    function showMore() {
+      alert('More projects coming soon!');
+    }
+  </script>
+</body>
+
+</html>
